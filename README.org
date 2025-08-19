@@ -1,0 +1,14 @@
+* Json Parser in Prolog
+
+This project goal was just to learn more about [[https://en.wikipedia.org/wiki/Prolog][Prolog]] and the [[https://en.wikipedia.org/wiki/Logic_programming][Logic Paradigm]], this implementation is not optimized to run on real projects.
+
+There are some samples used to test this implementation on [[https://github.com/bronen/json-parser-prolog/tree/master/json][json/]], you can run like this:
+
+#+BEGIN_SRC sh
+
+swipl -f json.pl -q -g "read_file('json/donuts.json', X), lexer(X, Y), parser(Y, R, Z), writeln(Z)." -t halt
+
+#+END_SRC
+
+#+RESULTS:
+| _11572{batters:_11064{batter:[_10814{id:1001 | type:Regular} | _10882{id:1002 | type:Chocolate} | _10950{id:1003 | type:Blueberry} | _11018{id:1004 | type:Devil's Food}]} | id:55 | name:donut | toppings:[_11118{id:5001 | type:None} | _11186{id:5002 | type:Glazed} | _11254{id:5005 | type:Sugar} | _11322{id:5007 | type:Powdered Sugar} | _11390{id:5006 | type:Chocolate with Sprinkles} | _11458{id:5003 | type:Chocolate} | _11526{id:5004 | type:Maple}]} |
